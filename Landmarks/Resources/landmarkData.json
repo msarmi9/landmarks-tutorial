@@ -1,7 +1,7 @@
 [
     {
         "name": "Turtle Rock",
-        "category": "Featured",
+        "category": "Rivers",
         "city": "Twentynine Palms",
         "state": "California",
         "id": 1001,
@@ -31,7 +31,7 @@
     },
     {
         "name": "Chilkoot Trail",
-        "category": "Rivers",
+        "category": "Mountains",
         "city": "Skagway",
         "state": "Alaska",
         "id": 1003,
@@ -76,7 +76,7 @@
     },
     {
         "name": "Lake McDonald",
-        "category": "Lakes",
+        "category": "Mountains",
         "city": "West Glacier",
         "state": "Montana",
         "id": 1006,
@@ -102,11 +102,11 @@
             "longitude": -143.122586,
             "latitude": 65.350021
         },
-        "imageName": "yukon_charleyrivers"
+        "imageName": "charleyrivers",
     },
     {
         "name": "Icy Bay",
-        "category": "Lakes",
+        "category": "Mountains",
         "city": "Icy Bay",
         "state": "Alaska",
         "id": 1008,
