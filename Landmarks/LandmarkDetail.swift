@@ -60,9 +60,10 @@ struct LandmarkDetail: View {
 }
 
 
-// For previewing app; will not be shipped
 struct LandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        LandmarkDetail(landmark: landmarkData[0])
+        let userData = UserData()
+        return LandmarkDetail(landmark: userData.landmarks[0])
+            .environmentObject(userData)
     }
 }
