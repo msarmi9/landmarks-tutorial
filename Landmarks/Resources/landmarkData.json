@@ -1,7 +1,7 @@
 [
     {
         "name": "Turtle Rock",
-        "category": "Featured",
+        "category": "Mountains",
         "city": "Twentynine Palms",
         "state": "California",
         "id": 1001,
@@ -16,7 +16,7 @@
     },
     {
         "name": "Silver Salmon Creek",
-        "category": "Lakes",
+        "category": "Rivers",
         "city": "Port Alsworth",
         "state": "Alaska",
         "id": 1002,
@@ -31,7 +31,7 @@
     },
     {
         "name": "Chilkoot Trail",
-        "category": "Rivers",
+        "category": "Mountains",
         "city": "Skagway",
         "state": "Alaska",
         "id": 1003,
@@ -106,7 +106,7 @@
     },
     {
         "name": "Icy Bay",
-        "category": "Lakes",
+        "category": "Mountains",
         "city": "Icy Bay",
         "state": "Alaska",
         "id": 1008,
