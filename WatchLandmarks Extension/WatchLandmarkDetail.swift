@@ -9,13 +9,57 @@
 import SwiftUI
 
 struct WatchLandmarkDetail: View {
+    @EnvironmentObject var userData: UserData
+    var landmark: Landmark
+    
+    var landmarkIndex: Int {
+        userData.landmarks.firstIndex(where: { $0.id == landmark.id })!
+    }
+        
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                CircleImage(image: self.landmark.image.resizable())
+                    .scaledToFit()
+                
+                Text(self.landmark.name)
+                    .font(.headline)
+                    .lineLimit(0)
+                
+                Toggle(isOn: $userData.landmarks[self.landmarkIndex].isFavorite) {
+                    Text("Favorite")
+                }
+                
+                Divider()
+                
+                Text(self.landmark.park)
+                    .font(.caption)
+                    .bold()
+                    .lineLimit(1)
+                
+                Text(self.landmark.state)
+                    .font(.caption)
+                
+                Divider()
+                
+                WatchMapView(landmark: self.landmark)
+                    .scaledToFit()
+                    .padding()
+            }
+            .padding(16)
+        }
     }
 }
 
 struct WatchLandmarkDetail_Previews: PreviewProvider {
     static var previews: some View {
-        WatchLandmarkDetail()
+        let userData = UserData()
+        return Group {
+            WatchLandmarkDetail(landmark: userData.landmarks[0]).environmentObject(userData)
+                .previewDevice("Apple Watch Series 5 - 44mm")
+        
+            WatchLandmarkDetail(landmark: userData.landmarks[1]).environmentObject(userData)
+                .previewDevice("Apple Watch Series 5 - 40mm")
+        }
     }
 }
